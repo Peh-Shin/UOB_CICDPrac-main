@@ -77,3 +77,9 @@ jobs:
         publish_dir: ./
         full_commit_message: ${{ github.event.head_commit.message }}
 
+    - if: ${{ success() }}
+      name: discord
+      uses: sebastianpopp/discord-action@releases/v2
+      with:
+        webhook: ${{ secrets.DISCORD_WEBHOOK }}
+        message: ${{ github.repository }} deployed :)
