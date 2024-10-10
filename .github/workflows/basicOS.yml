@@ -86,7 +86,7 @@ jobs:
       # below accordingly.
       if: github.ref == 'refs/heads/main'
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        github_token: ${{ secrets.SECRET_TOKEN }}
         publish_dir: ./public
         full_commit_message: ${{ github.event.head_commit.message }}
 
