@@ -82,4 +82,4 @@ jobs:
       uses: sebastianpopp/discord-action@releases/v2
       with:
         webhook: ${{ secrets.DISCORD_WEBHOOK }}
-        message: ${{ github.repository }} deployed :)
+        message: ${{ github.repository }} deployed @ https://peh-shin.github.io/UOB_CICDPrac-main/
