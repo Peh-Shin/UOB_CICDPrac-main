@@ -59,12 +59,12 @@ jobs:
         ls
         cd hiddenfolder
         ls
-    #Github actions
-    - name: discord-action
-      uses: sebastianpopp/discord-action@v2.0
-      with:
-        webhook: ${{ secrets.DISCORD_WEBHOOK }}
-        message: ${{ github.repository }} has been successfully deployed.
+    # #Github actions
+    # - name: discord-action
+    #   uses: sebastianpopp/discord-action@v2.0
+    #   with:
+    #     webhook: ${{ secrets.DISCORD_WEBHOOK }}
+    #     message: ${{ github.repository }} has been successfully deployed.
     # Deploy to Github pages
     - uses: actions/checkout@v3
       with:
@@ -88,4 +88,5 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./public
+        full_commit_message: ${{ github.event.head_commit.message }}
 
